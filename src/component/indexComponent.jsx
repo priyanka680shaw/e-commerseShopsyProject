@@ -1,0 +1,8 @@
+export {default as Navbar} from "./Navbar" 
+export {default as Hero} from "./Hero"
+export {default as Products} from "./Products"
+export {default as BestProducts} from "./BestProducts"
+export {default as Banner} from "./Banner"
+export {default as Suscribe} from "./Suscribe"
+export {default as TopSelligProducts} from "./TopSelligProducts"
+export {default as Testimonial} from "./Testimonial"

@@ -41,7 +41,7 @@ const BestProducts = () => {
                 Top Best Selling Products for you
               </p>
               <h1 className="text-3xl font-bold " data-aos = "fade-up">Best Products</h1>
-              <p className="text-xs text-gray-400" data-aos = "fade-up">
+              <p className="text-md text-gray-400" data-aos = "fade-up">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
                 aperiam suscipit excepturi eius ullam quod soluta rerum est
                 possimus ad eligendi debitis tempora quaerat distinctio quos,

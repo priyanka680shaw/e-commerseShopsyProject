@@ -6,3 +6,4 @@ export {default as Banner} from "./Banner"
 export {default as Suscribe} from "./Suscribe"
 export {default as TopSelligProducts} from "./TopSelligProducts"
 export {default as Testimonial} from "./Testimonial"
+export {default as MobileMenu} from './MobileMenu'

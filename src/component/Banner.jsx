@@ -9,7 +9,7 @@ const Banner = () => {
         <>
             <div className="min-h-[550px] flex justify-center items-center py-12 sm:py-0">
                 <div className="container">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gag-6 items-center ">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gag-6 items-center ">
                         {/* image Section */}
                         <div data-aos="zoom-in">
                             <img

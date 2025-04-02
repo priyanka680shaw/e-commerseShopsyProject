@@ -6,8 +6,12 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import { setProduct , setOriginalProduct , setResetProduct } from '../redux/slice/homeSlice';
+import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
+import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
+    const [mobileMenuOPen , setMobileMenuOpen] = useState(false)
+    console.log(mobileMenuOPen)
     const menu = [
         { path: '/', label: 'Home' },
         { path: '/beautyProducts', label: 'Beauty Products' },
@@ -95,13 +99,21 @@ function searchProduct(e) {
                             >
                                 {isDarkModeTrue ? <FaMoon className='text-white text-2xl font-bold' /> : <FaSun className='text-white text-2xl font-bold' />}
                             </div>
+                            <div 
+                                className='text-white font-extrabold text-2xl cursor-pointer bg-gradient-to-r from-primary to-secondary rounded-full p-2 rotate-90 md:hidden'
+                                // onClick={() => setIsDarkModeTrue(prev => !prev)}
+                            >
+                                    <HiOutlineAdjustmentsVertical onClick ={()=>
+                                        setMobileMenuOpen((prev)=>!prev)
+                                    }/>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 {/* Lower Navbar */}
                 <div className='flex justify-center bg-white dark:bg-gray-900 py-2 shadow-md'>
-                    <ul className='sm:flex hidden items-center gap-6'>
+                    <ul className='md:flex hidden items-center gap-6'>
                         {menu.map((data, idx) => (
                             <li key={idx}>
                                 <Link to={data.path} className='inline-block px-4 hover:text-primary duration-200 font-bold text-md'>
@@ -111,7 +123,15 @@ function searchProduct(e) {
                         ))}
                     </ul>
                 </div>
+                
+
+                <div className=''>
+                    {
+                        mobileMenuOPen && <MobileMenu/>
+                    }
+                </div>
             </div>
+          
 
             {/* Prevent Content Overlap - Ensure Bottom Content is Not Hidden */}
             <div className='pt-[80px] sm:pt-[100px] dark:bg-gray-950'></div>

@@ -34,7 +34,7 @@ const dispatch = useDispatch()
       
       <div className="text-center mb-10 max-w-[600px] mx-auto">
         
-        <h1 className="text-3xl font-bold dark:text-gray-400">Beauty Products 💄💅  f</h1>
+        <h1 className="text-3xl font-bold dark:text-gray-400">Beauty Products 💄💅  </h1>
         <p className="text-3xl text-primary">Top Beauty Products for You</p>
         <p className="text-xl text-gray-400">Explore the best beauty products from Maybelline.</p>
       </div>

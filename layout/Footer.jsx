@@ -17,7 +17,7 @@ const Footer = () => {
     {/* // <div className="overflow-x-hidden dark:bg-gray-950 dark:text-white duration-200 bg-primary w-full h-5" style={{ background: "#f8D6A4" }}> */}
       <div className="container mx-auto py-8 px-6 w-[90%]">
         {/* Footer Content */}
-        <div className="flex flex-wrap justify-between gap-y-10">
+        <div className="md:flex md:flex-wrap md:justify-between gap-y-10 sm:block">
           {/* Company Details */}
           <div className="w-full md:w-1/3">
             <h1 className="sm:text-3xl text-xl font-bold flex items-center gap-3">
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
 
           {/* Links and Contact */}
-          <div className="flex flex-wrap justify-between w-full md:w-2/3 gap-y-8 ">
+          <div className="sm:flex flex-wrap justify-between w-full md:w-2/3 gap-y-8 sm:flex-col ">
             {/* Important Links */}
             <div className="w-1/3">
               <h1 className="sm:text-2xl text-xl font-bold mb-3">Important Links</h1>
@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
 
             {/* Contact Section */}
-            <div className="w-1/3 ">
+            <div className="w-1/3">
               <h1 className="sm:text-2xl text-xl font-bold mb-3">Contact Us</h1>
               <ul className="flex flex-col gap-3">
                 <li className="flex items-center gap-2 cursor-pointer hover:text-primary hover:translate-x-1 transition duration-300">
@@ -78,8 +78,8 @@ const Footer = () => {
 
         {/* Social Icons */}
    
-        <div className="mt-10 mb-6 border-t border-gray-700 pt-4 flex justify-between items-center">
-          <p className="">© 2025 Shopsy. All rights reserved.</p>
+        <div className="mt-10 mb-6 border-t border-gray-700 pt-4 sm:flex justify-between items-center sm:flex-col sm:gap-3">
+          <p className="sm:my-4">© 2025 Shopsy. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#" className="hover:text-primary text-2xl ">
               <FaFacebook />

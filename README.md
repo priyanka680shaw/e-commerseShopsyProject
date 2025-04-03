@@ -73,5 +73,5 @@ This project is **open-source** and available for learning purposes.
 
 ---
 
-**Note:** Update `your-netlify-link` with your actual Netlify deployment link before adding it to your resume! 🚀
+** Update `https://glittering-pasca-c2dd50.netlify.app/` with your actual Netlify deployment link before adding it to your resume! 🚀
 

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useSelector , useDispatch} from 'react-redux';
 import { setProduct , setOriginalProduct , setResetProduct } from '../redux/slice/homeSlice';
 import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
+import { IoMdClose } from "react-icons/io";
 import MobileMenu from './MobileMenu';
 
 const Navbar = () => {
@@ -67,7 +68,7 @@ function searchProduct(e) {
                         <div>
                             <Link to="/" className='font-bold text-2xl sm:text-3xl flex gap-2 items-center'>
                                 <img src={logo} alt="logo" className='w-10' />
-                                <span>Shopsy</span>
+                                <span className='hidden sm:block'>Shopsy</span>
                             </Link>
                         </div>
 
@@ -99,13 +100,19 @@ function searchProduct(e) {
                             >
                                 {isDarkModeTrue ? <FaMoon className='text-white text-2xl font-bold' /> : <FaSun className='text-white text-2xl font-bold' />}
                             </div>
+                            {/* hamburg */}
                             <div 
                                 className='text-white font-extrabold text-2xl cursor-pointer bg-gradient-to-r from-primary to-secondary rounded-full p-2 rotate-90 md:hidden'
                                 // onClick={() => setIsDarkModeTrue(prev => !prev)}
                             >
-                                    <HiOutlineAdjustmentsVertical onClick ={()=>
-                                        setMobileMenuOpen((prev)=>!prev)
+                                {
+                                    mobileMenuOPen ? <><IoMdClose onClick={()=>setMobileMenuOpen(false)}/> </> : <>
+                                     <HiOutlineAdjustmentsVertical onClick ={()=>
+                                        setMobileMenuOpen(true)
                                     }/>
+                                    </>
+                                }
+                                   
                             </div>
                         </div>
                     </div>

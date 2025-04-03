@@ -13,7 +13,7 @@ const MobileMenu = () => {
     ];
   return (
     <>
-                    <div className='dark:bg-gray-950 sm:flex justify-center  dark:text-white py-2 shadow-md absolute right-0 w-[70%] h-[80vh] bg-gray-200'>
+                    <div className='dark:bg-gray-950 sm:flex justify-center  dark:text-white py-2 shadow-md absolute right-0 w-[60%] h-[85vh] bg-gray-200'>
                     <ul className='flex  gap-6 flex-col'>
                         {menu.map((data, idx) => (
                             <li key={idx}>

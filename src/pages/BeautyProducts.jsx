@@ -3,12 +3,13 @@ import { IoStarSharp } from "react-icons/io5";
 import { ToastContainer, toast } from "react-toastify";
 import { useSelector, useDispatch } from "react-redux";
 import { setAddtoCard } from "../redux/slice/addToCart";
+import beautyproductsData from "../data/beautyproductss.json"
 import "react-toastify/dist/ReactToastify.css";
 
 const BeautyProducts = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-
+console.log(beautyproductsData)
 const dispatch = useDispatch()
   useEffect(() => {
     const fetchBeautyProducts = async () => {
@@ -140,7 +141,7 @@ const dispatch = useDispatch()
     
      </>
         ) : (
-          data.map((item) => (
+          beautyproductsData.map((item) => (
             <div key={item.id} className="bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-md p-4 flex flex-col items-center">
               <img src={item.image_link} alt={item.name} className="h-[200px] w-[150px] object-cover rounded-md" />
               <div className="mt-3 text-center">
